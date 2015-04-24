@@ -43,6 +43,10 @@ attribute :logconfig, :kind_of => String, :default => nil
 attribute :secure_scheme_headers, :kind_of => Hash, :default => nil
 attribute :forwarded_allow_ips, :kind_of => String, :default => nil
 attribute :proc_name, :kind_of => String, :default => nil
+attribute :syslog, :kind_of => [TrueClass, FalseClass], :default => false
+attribute :syslog_addr, :kind_of => String, :default => nil
+attribute :syslog_prefix, :kind_of => String, :default => nil
+attribute :syslog_facility, :kind_of => String, :default => 'user'
 
 
 attribute :server_hooks, :kind_of => Hash, :default => {}, \

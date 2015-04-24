@@ -116,6 +116,14 @@ logger_class = "<%= @logger_class %>"
 logconfig = "<%= @logconfig %>"
 
 <%- end %>
+<%- if @syslog %>
+# Log to syslog
+syslog = <%= @syslog.to_s.capitalize %>
+syslog_addr = '<%= @syslog_addr %>'
+syslog_prefix = '<%= @syslog_prefix %>'
+syslog_facility = '<%= @syslog_facility %>'
+
+<%- end %>
 <%- if @secure_scheme_headers %>
 # A dictionary containing headers and values that the front-end proxy uses to indicate HTTPS requests.
 secure_scheme_headers = {
